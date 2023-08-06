@@ -17,7 +17,6 @@ import java.util.Collection;
 @RequestMapping(value = "/api/v1/reviews", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ReviewController {
     private final ReviewService reviewService;
-
     @Autowired
     public ReviewController(ReviewService reviewService) {
         this.reviewService = reviewService;

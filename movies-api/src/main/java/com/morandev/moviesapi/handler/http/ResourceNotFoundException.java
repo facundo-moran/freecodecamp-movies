@@ -1,4 +1,4 @@
-package com.morandev.moviesapi.handlers.http;
+package com.morandev.moviesapi.handler.http;
 
 public class ResourceNotFoundException extends RuntimeException {
     private static final String DESCRIPTION = "Not Found Exception";

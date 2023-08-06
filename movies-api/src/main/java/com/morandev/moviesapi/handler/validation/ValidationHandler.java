@@ -1,4 +1,4 @@
-package com.morandev.moviesapi.handlers.validation;
+package com.morandev.moviesapi.handler.validation;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

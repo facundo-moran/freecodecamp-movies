@@ -1,4 +1,4 @@
-package com.morandev.moviesapi.handlers.http;
+package com.morandev.moviesapi.handler.http;
 
 public class BadRequestException extends RuntimeException {
     private static final String DESCRIPTION = "Bad Request Exception";

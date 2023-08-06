@@ -1,6 +1,6 @@
 package com.morandev.moviesapi.controller;
 
-import com.morandev.moviesapi.handlers.http.BadRequestException;
+import com.morandev.moviesapi.handler.http.BadRequestException;
 import com.morandev.moviesapi.model.review.Review;
 import com.morandev.moviesapi.model.review.dto.ReviewDto;
 import com.morandev.moviesapi.service.impl.ReviewService;

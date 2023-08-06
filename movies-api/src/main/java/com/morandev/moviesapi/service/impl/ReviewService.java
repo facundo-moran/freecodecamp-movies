@@ -27,13 +27,13 @@ public class ReviewService implements IReviewService {
     @Override
     public Review createReview(String body, String imdb) throws RuntimeException {
         /**
-         *  1. CREAR REVIEW
+         *  1. save - CREAR REVIEW
          *  Si no se guarda (save) luego hay error de id nulo en el intento de update
          */
         final Review reviewCreated = this.reviewRepository.save(new Review(body));
 
         /**
-         *  2. ACTUALIZAR MOVIE
+         *  2. update - ACTUALIZAR MOVIE
          */
         final UpdateResult result = this.mongoTemplate.update(Movie.class)
                         .matching(Criteria.where("imdb").is(imdb))

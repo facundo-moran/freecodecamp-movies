@@ -1,4 +1,4 @@
-package com.morandev.moviesapi.handlers.http;
+package com.morandev.moviesapi.handler.http;
 
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;

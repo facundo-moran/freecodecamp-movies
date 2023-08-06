@@ -1,6 +1,6 @@
 package com.morandev.moviesapi.model;
 
-public class Message {
+public class RootMessageDto {
     private final String message;
     private final boolean error;
 
@@ -10,7 +10,7 @@ public class Message {
      * @param message
      * @param error
      */
-    public Message(String message, boolean error) {
+    public RootMessageDto(String message, boolean error) {
         this.message = message;
         this.error = error;
     }

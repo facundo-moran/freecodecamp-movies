@@ -1,6 +1,11 @@
-import './App.css';
 import { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import Layout from './components/Layout';
+import Home from './components/home/Home'
 import axiosInstance from './util/api/apiService';
+
+import './App.css';
 
 function App() {
     const [movies, setMovies] = useState();
@@ -8,7 +13,6 @@ function App() {
     const getMovies = async () => {
         try {
             const data = await axiosInstance.get('api/v1/movies')
-            console.log(data);
             setMovies(data);
         } catch (err) {
             console.error(err);
@@ -19,8 +23,16 @@ function App() {
         getMovies();
     }, [])
 
+    
+
     return (
         <div className="App">
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route path="/" element={<Home moviesArr={movies} />}>
+                    </Route>
+                </Route>
+            </Routes> 
         </div>
     );
 }

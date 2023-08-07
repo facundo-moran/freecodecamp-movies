@@ -22,6 +22,7 @@ public class Movie {
     private String imdb;
     private String title;
     private LocalDate releaseDate;
+    private String trailerLink;
     private List<String> genres;
     private String poster;
     private List<String> backdrops;

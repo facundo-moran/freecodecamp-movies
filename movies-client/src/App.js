@@ -19,7 +19,6 @@ function App() {
     const getMovies = async () => {
         try {
             const data = await axiosInstance.get('api/v1/movies')
-            console.log(data);
             setMovies(data);
         } catch (err) {
             console.error(err);
@@ -29,7 +28,6 @@ function App() {
     const getMovieData = async (movieId) => {
         try {
             const data = await axiosInstance.get(`api/v1/movies/${movieId}`)
-            console.log(data);
             setMovie(data);
         } catch (err) {
             console.error(err);

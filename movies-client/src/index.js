@@ -5,17 +5,13 @@ import App from './App';
 //config de bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-//config de dotenv
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-	<React.StrictMode>
-		<BrowserRouter>
-			<Routes>
-				<Route path='/*' element={<App />}/>
-			</Routes>
-		</BrowserRouter>
-
-	</React.StrictMode>
+	<BrowserRouter>
+		<Routes>
+			<Route path='/*' element={<App />} />
+		</Routes>
+	</BrowserRouter>
 );

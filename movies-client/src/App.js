@@ -7,6 +7,7 @@ import Header from './components/header/Header';
 import axiosInstance from './util/api/apiService';
 
 import './App.css';
+import Trailer from './components/trailer/Trailer';
 
 function App() {
     const [movies, setMovies] = useState();
@@ -14,6 +15,7 @@ function App() {
     const getMovies = async () => {
         try {
             const data = await axiosInstance.get('api/v1/movies')
+            console.log(data);
             setMovies(data);
         } catch (err) {
             console.error(err);
@@ -24,15 +26,13 @@ function App() {
         getMovies();
     }, [])
 
-    
-
     return (
         <div className="App">
             <Header />
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    <Route path="/" element={<Home moviesArr={movies} />}>
-                    </Route>
+                    <Route path="/" element={<Home moviesArr={movies} />} />
+                    <Route path="/trailer/:ytTrailerId" element={<Trailer />} />
                 </Route>
             </Routes> 
         </div>

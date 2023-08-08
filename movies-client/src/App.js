@@ -42,7 +42,7 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/freecodecamp-movies" element={<Layout />}>
-                    <Route path="/freecodecamp-movies/" element={<Home moviesArr={movies} />} />
+                    <Route path="/freecodecamp-movies" element={<Home moviesArr={movies} />} />
                     <Route path="/freecodecamp-movies/trailer/:ytTrailerId" element={<Trailer />} />
                     <Route path="/freecodecamp-movies/reviews/:movieId"
                         element={

@@ -41,10 +41,10 @@ function App() {
         <div className="App">
             <Header />
             <Routes>
-                <Route path="/freecodecamp-movies" element={<Layout />}>
-                    <Route path="/freecodecamp-movies" element={<Home moviesArr={movies} />} />
-                    <Route path="/freecodecamp-movies/trailer/:ytTrailerId" element={<Trailer />} />
-                    <Route path="/freecodecamp-movies/reviews/:movieId"
+                <Route path="/" element={<Layout />}>
+                    <Route path="/" element={<Home moviesArr={movies} />} />
+                    <Route path="/trailer/:ytTrailerId" element={<Trailer />} />
+                    <Route path="/reviews/:movieId"
                         element={
                             <Reviews
                                 getMovieData={getMovieData}
